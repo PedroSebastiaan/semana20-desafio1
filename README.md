@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Imitation project
 
-Things you may want to cover:
+The focus of this exercize is emulate animations of bootstrap components.
 
-* Ruby version
+## Yarn
 
-* System dependencies
+Add jquery to the proyect using yarn:
 
-* Configuration
+```bash
+yarn add jquery
+```
 
-* Database creation
+## application.js configuration
 
-* Database initialization
+```rails
+//= require rails-ujs
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require turbolinks
+//= require_tree .
+```
 
-* How to run the test suite
+### Disclaimer
 
-* Services (job queues, cache servers, search engines, etc.)
+The original bootstrap configuration of a alert is:
 
-* Deployment instructions
+```rails
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+```
 
-* ...
+We just wanna conservate the styles, so we use some clases of this component:
+```rails
+<div class="alert alert-warning">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+</div>
+```
